@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product CRUD</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    input, textarea { margin: 4px 0; padding: 6px; width: 300px; }
+    button { padding: 6px 12px; margin-right: 6px; cursor: pointer; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+
+  <h2 id="formTitle">Add Product</h2>
+  <input type="hidden" id="productId" />
+  <div><input id="product_name" placeholder="Product Name" /></div>
+  <div><input id="category" placeholder="Category" /></div>
+  <div><input id="price" type="number" step="0.01" placeholder="Price" /></div>
+  <div><input id="stock" type="number" placeholder="Stock" /></div>
+  <div><textarea id="description" placeholder="Description"></textarea></div>
+  <button onclick="saveProduct()">Save</button>
+  <button onclick="resetForm()">Cancel</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="productTableBody"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
